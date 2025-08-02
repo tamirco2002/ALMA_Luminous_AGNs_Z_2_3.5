@@ -1,5 +1,4 @@
 
-
 class Source:
     def __init__(self, db, index,temp,beta):
         self.temp = temp
@@ -458,6 +457,7 @@ class Source:
         """
         This function plots Flux Density [erg/Hz/s/cm^2] vs. Rest-Frame Frequency
         """
+
         plt.figure(figsize=(12, 8),dpi=600)
         plt.rc('font', size=16)
         ax = plt.axes()
@@ -515,12 +515,7 @@ class Source:
 
         # Changing the order of the legend
         handles, labels = ax.get_legend_handles_labels()
-        # if (np.abs(self.SNR)<3 or self.ALMA_det == 'non-det'):
-        #     handles = handles[-2:] + [handles[0], handles[-3]] + handles[1:-3]
-        #     labels = labels[-2:] + [labels[0], labels[-3]] + labels[1:-3]
-        # else:
-        #     handles = [handles[0], handles[-1], handles[1], handles[-2]] + handles[2:-2]
-        #     labels = [labels[0], labels[-1], labels[1], labels[-2]] + labels[2:-2]
+
         order = ext.orderSEDsLabels(labels)
         labels = [labels[i] for i in order]
         handles = [handles[i] for i in order]
@@ -733,6 +728,7 @@ class Source:
             file_dict["SFR-GB-Neigh[M_sun/year]"] = [str(np.round(self.companion.SFR_gb, 3))]
             file_dict["SFR-CE-Neigh[M_sun/year]"] = [str(np.round(self.companion.SFR_CE, 3))]
 
+
         df_temp = pd.DataFrame.from_dict(file_dict, orient='columns')
         return df_temp
 
@@ -746,6 +742,7 @@ class Companion():
         self.RA = RA
         self.Dec = Dec
         self.z = main_z
+
 
 
     def find_SFRs(self,freq,ob_freq,temp,beta,dist_cm,df_CE,nuLnu_row_CE,wl_index):
@@ -763,3 +760,4 @@ class Companion():
         self.SFR_gb = (self.gb_lum_solar) / (10 ** 10)  # SFR=L/(l_sun*10^10)
         self.SFR_CE = ((10 ** self.L_CE) * u.erg / u.s) / (const.L_sun.to(u.erg / u.s) * (10 ** 10))
         return
+
