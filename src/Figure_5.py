@@ -1,6 +1,14 @@
-# Figure 4.2 in Thesis - Distribution of SFRs
-def SFR_histogram(df_path,output_path,type='GB'):
-    df = pd.read_excel(df_path)
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+from src import ALMA_HERSCHEL_INPUT_PATH
+
+
+# Figure 5 - Distribution of SFRs
+def SFR_histogram(output_path,type='GB',GB_type='BB'):
+    results_file_path = f'../data/Results/{GB_type}.xlsx'
+    df = pd.read_excel(results_file_path)
     if type == 'GB':
         all_sources = [np.log10(df["GB-SFR[M_sun/year]"][s]) for s in range(len(df["SNR"]))]
         det_sources = [np.log10(df["GB-SFR[M_sun/year]"][s]) for s in range(len(df["SNR"])) if df["Alma group"][s]=='det' and np.abs(df["SNR"][s])>=3]
@@ -43,6 +51,5 @@ def SFR_histogram(df_path,output_path,type='GB'):
     plt.savefig(f'{output_path}\SFR_distribution.pdf',format='pdf')
 
 if __name__ == '__main__':
-    out_path == 'Replace with your output path'
-    df_path = pd.read_excel('..data/ALMA x Herschel CASA input - March23.xlsx')
-    SFR_histogram(df_path,out_path,type='GB')
+    out_path = 'Replace with your output path'
+    SFR_histogram(out_path,type='GB')

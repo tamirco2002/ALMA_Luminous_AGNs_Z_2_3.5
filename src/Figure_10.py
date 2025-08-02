@@ -1,5 +1,13 @@
-# Figure 4.7  in Thesis - SFR/ Mbhdot for the most luminous quasars at $z\lesssim3.5$
-def SFR_Mdot_z(output_path,df_path):
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+import Extensions as ext
+
+
+# Figure 10  - SFR/ Mbhdot for the most luminous quasars at $z\lesssim3.5$
+def SFR_Mdot_z(output_path,data_path):
     filenames = ['cohen24','netzer16', 'schultz19','Rosario13','schweizer07']
     markers = ['o', 'h' ,'s', 'D','*', 'D']
     colors = ['red','black', 'green','purple', 'lightskyblue', 'orange']
@@ -15,7 +23,7 @@ def SFR_Mdot_z(output_path,df_path):
     fig.set_figwidth(12)
     all_vals = []
     for i in range(len(filenames)):
-        df = pd.read_csv(df_path+filenames[i]+".csv")
+        df = pd.read_csv(data_path+filenames[i]+".csv")
         ms = [8 if mark not in ['*','o','D'] else 10 if mark in ['o','D'] else 13 for mark in markers]
         # mfc = [colors[i] if x==1 and markers[i]!='D' else 'none' for x in df['ul']]
         mfc = [colors[i] if markers[i]!='D' else 'none' for x in df['ul']]
@@ -48,6 +56,6 @@ def SFR_Mdot_z(output_path,df_path):
     plt.savefig(f'{output_path}\SFR_Mdot_z.pdf',format='pdf')
 
 if __name__ == '__main__':
-    df_path = '../Data/SFR_Mdot_z/'
-    out_path == 'Replace with your output path'
-    SFR_Mdot_z(output_path, df_path)
+    out_path = 'Replace with your output path'
+    data_folder_path = '../data/SFR_Mdot_Z_Figure/'
+    SFR_Mdot_z(out_path,data_folder_path)

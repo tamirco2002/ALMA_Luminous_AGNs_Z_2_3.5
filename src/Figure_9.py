@@ -1,4 +1,12 @@
-# Figure 4.6 (top) in Thesis - Comparison with literature samples
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+import Extensions as ext
+
+
+# Figure 9 (a) in Thesis - Comparison with literature samples
 def compapre_LAGN_LSFR(output_path,data_folder_path):
     filenames = ['f6_cohen24','f6_netzer16','f6_schultz19','f6_duras17_newy','f6_scholtz18_update','f6_stanley15','f6_stanley17']
     markers = ['o','o','s','*','h','D','D']
@@ -89,7 +97,7 @@ def compapre_LAGN_LSFR(output_path,data_folder_path):
 
     plt.savefig(f'{output_path}\SFR_compare.pdf',format='pdf')
 
-# Figure 4.6 (bottom) in Thesis - Comparison with literature samples
+# Figure 9 (b) in Thesis - Comparison with literature samples
 def SFR_Evolution(output_path,data_folder_path):
     filenames = ['f7_cohen24','f7_netzer16','f7_schulze19','f7_duras17','f7_scholtz18','f7_hatziminaoglou18','f7_nguyen20','f7_priddey03']
     markers = ['o','o','s','*','h','^','D','d']
@@ -157,8 +165,9 @@ def SFR_Evolution(output_path,data_folder_path):
 
 
 if __name__ == '__main__':
-    data_folder_path_f6_top = '../Data/schulze19_external_samples/figure6/'
-    data_folder_path_f6_bottom = '../Data/schulze19_external_samples/figure7/'
-    out_path == 'Replace with your output path'
-    compapre_LAGN_LSFR(output_path,data_folder_path_f6_top)
-    SFR_Evolution(output_path,data_folder_path)
+    data_folder_path_a = '../data/Literature_Comparison_Figure/subfigure_a/'
+    data_folder_path_b = '../data/Literature_Comparison_Figure/subfigure_b/'
+    out_path = 'Replace with your output path'
+
+    compapre_LAGN_LSFR(out_path,data_folder_path_a)
+    SFR_Evolution(out_path,data_folder_path_b)

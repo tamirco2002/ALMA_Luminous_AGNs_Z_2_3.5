@@ -1,7 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="381971a7-f706-4ca9-a16a-a7b01502f29f" name="Default Changelist" comment="" />
+    <list default="true" id="381971a7-f706-4ca9-a16a-a7b01502f29f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/ALMA_x_Herschel_CASA_input.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Chary_corrected_table_9feb17.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X25.J222247_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X2e.J002025_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X31.J005202_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X31.J005814_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X31.J010226_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X31.J010611_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X37.J085823_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X37.J085847_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X37.J090000_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X37.J091047_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X37.J091247_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X3a.J095112_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X3a.J101112_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X43.J081935_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X43.J082136_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X43.J083247_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X4c.J111312_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X4c.J111935_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X4c.J113159_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X52.J122647_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X52.J123136_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X52.J124800_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X56.J095423_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X59.J135600_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X59.J141823_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X62.J215711_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X65.J210824_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X65.J212335_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X6e.J005228_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Fits/member.uid___A001_X137b_X71.J233447_sci.spw5_7_17_19.cont.I.pbcor.fits" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Growth_Evo_Figure/table1.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Growth_Evo_Figure/table3.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_cohen24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_duras17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_duras17_newy.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_netzer16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_scholtz18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_scholtz18_update.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_schultz19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_stanley15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_a/f6_stanley17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_cohen24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_duras17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_hatziminaoglou18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_netzer14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_netzer16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_nguyen20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_priddey03.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_scholtz18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Literature_Comparison_Figure/subfigure_b/f7_schulze19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Results/BB.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/Results/FF.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/SED_table_Lani_2017_corrected.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/SFR_Mdot_Z_Figure/Rosario13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/SFR_Mdot_Z_Figure/cohen24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/SFR_Mdot_Z_Figure/netzer16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/SFR_Mdot_Z_Figure/schultz19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/SFR_Mdot_Z_Figure/schweizer07.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Extensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExtractFromCasaFiles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figure_6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Figure_3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figure_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Figure_4_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figure_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Figure_4_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figure_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Figure_4_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figure_8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Figure_4_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figure_9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Figure_4_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figure_10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,40 +103,174 @@
     <hideBySeverity>
       <option value="200" />
     </hideBySeverity>
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="30j4Ja4WoIY3O7j6NEJyN5eOn6q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Figure_3_1.executor": "Debug",
+    "Python.Figure_4_2.executor": "Run",
+    "Python.Figure_4_4.executor": "Run",
+    "Python.Figure_4_5.executor": "Run",
+    "Python.Figure_4_6.executor": "Run",
+    "Python.Figure_4_7.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/GitHub/ALMA_Luminous_AGNs_Z_2_3.5/data/Growth_Evo_Figure",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.externalTools"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\data\Growth_Evo_Figure" />
+      <recent name="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\data\Literature_Comparison_Figure\subfigure_b" />
+      <recent name="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\data\Literature_Comparison_Figure\subfigure_a" />
+      <recent name="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\data\SFR_Mdot_Z_Figure" />
+      <recent name="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\data\Fits" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\data\Results" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="pytest in Source.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Figure_6">
+    <configuration name="Figure_10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ALMA_Luminous_AGNs_Z_2_3.5" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/Source.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\src\Figure_10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Figure_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ALMA_Luminous_AGNs_Z_2_3.5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Figure_6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Figure_7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ALMA_Luminous_AGNs_Z_2_3.5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\src\Figure_7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Figure_8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ALMA_Luminous_AGNs_Z_2_3.5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\src\Figure_8.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Figure_9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ALMA_Luminous_AGNs_Z_2_3.5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\GitHub\ALMA_Luminous_AGNs_Z_2_3.5\src\Figure_9.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in Source.py" />
+        <item itemvalue="Python.Figure_6" />
+        <item itemvalue="Python.Figure_8" />
+        <item itemvalue="Python.Figure_10" />
+        <item itemvalue="Python.Figure_9" />
+        <item itemvalue="Python.Figure_7" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4c141bd692a7-e2d783800521-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26927.90" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,35 +283,15 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="2318" y="210" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1754131745754">
-      <screen x="1920" y="0" width="1280" height="693" />
-    </state>
-    <state x="2318" y="210" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1280.693/0.0.1920.1040@1920.0.1280.693" timestamp="1754131745754" />
-    <state width="1897" height="267" key="GridCell.Tab.0.bottom" timestamp="1754141502096">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1897" height="267" key="GridCell.Tab.0.bottom/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1754141502096" />
-    <state width="1897" height="267" key="GridCell.Tab.0.center" timestamp="1754141502096">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1897" height="267" key="GridCell.Tab.0.center/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1754141502096" />
-    <state width="1897" height="267" key="GridCell.Tab.0.left" timestamp="1754141502096">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1897" height="267" key="GridCell.Tab.0.left/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1754141502096" />
-    <state width="1897" height="267" key="GridCell.Tab.0.right" timestamp="1754141502096">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1897" height="267" key="GridCell.Tab.0.right/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1754141502096" />
-    <state x="212" y="0" key="SettingsEditor" timestamp="1754141771705">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="212" y="0" key="SettingsEditor/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1754141771705" />
-    <state x="2061" y="0" key="SettingsEditor/1920.0.1280.693/0.0.1920.1040@1920.0.1280.693" timestamp="1754131944933" />
-    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1754141823978">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="253" width="585" height="592" key="find.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1754141823978" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/Figure_1.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

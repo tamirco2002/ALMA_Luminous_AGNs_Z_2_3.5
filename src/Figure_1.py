@@ -1,9 +1,25 @@
+from datetime import datetime
 
-# Figure 3.1 in Thesis - Separations of quasars and ALMA-detected hosts
-def quasars_host_seperation(output_path,df_path,df_CE_path,df_torus_path,sep = False, dates = False):
-    db = pd.read_excel(df_path)
-    df_CE = pd.read_excel(df_CE_path)
-    df_torus = pd.read_csv(df_torus_path)
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from astropy import units as u
+from astropy.coordinates import SkyCoord
+from astropy.cosmology import LambdaCDM
+from astropy.io import fits
+from scipy import integrate
+from scipy import interpolate
+from scipy.optimize import curve_fit
+
+import Extensions as ext
+from src import ALMA_HERSCHEL_INPUT_PATH, CE01_PATH, LANI_TORUS_PATH
+
+
+# Figure 1 - Separations of quasars and ALMA-detected hosts
+def quasars_host_seperation(output_path,sep = False, dates = False):
+    db = pd.read_excel(ALMA_HERSCHEL_INPUT_PATH)
+    df_CE = pd.read_excel(CE01_PATH)
+    df_torus = pd.read_csv(LANI_TORUS_PATH)
     indicators=db['ind'].to_numpy()
 
     L_AGN = db['log L_AGN'].to_numpy()
@@ -20,7 +36,7 @@ def quasars_host_seperation(output_path,df_path,df_CE_path,df_torus_path,sep = F
     RA_CASA = [str(db.iloc[i]['RA [CASA]']) for i in range (len(db['RA [SDSS/DR16]']))]
     Dec_CASA = [str(db.iloc[i]['Dec [CASA]']) for i in range(len(db['Dec [CASA]']))]
 
-    Fits_location = "..data/Fits"
+    Fits_location = "../data/Fits"
     hdul = [fits.open(Fits_location+"/"+fits_filename[i]) for i in range(len(fits_filename))]
     data = [hdul[i][0].data[0, 0] for i in range(len(hdul))]
     hdr = [hdul[i][0].header for i in range(len(hdul))]
@@ -54,7 +70,7 @@ def quasars_host_seperation(output_path,df_path,df_CE_path,df_torus_path,sep = F
         outputDF["Seperation [arc-sec]"]=seperations_arc
         outputDF["Seperation [kpc]"] = seperations_kpc
         outputDF["Seperation [pixel]"] = seperations_pix
-        outputDF.to_excel(result_location+"SeperationsFile_"+datetime.now().strftime("%m%d%Y-%H%M%S")+".xlsx")
+        outputDF.to_excel(output_path+"\SeperationsFile_"+datetime.now().strftime("%m%d%Y-%H%M%S")+".xlsx")
 
         df_det = outputDF.loc[outputDF["Detected by ALMA"] == 'det']
         df_undet = outputDF.loc[outputDF["Detected by ALMA"] == 'non-det']
@@ -72,8 +88,7 @@ def quasars_host_seperation(output_path,df_path,df_CE_path,df_torus_path,sep = F
         plt.xlabel("Distance between quasar center and galaxy center [arc-sec]")
         plt.ylabel("Number of Sources")
         plt.yticks(np.arange(0, 20, step=2))
-        # plt.title("Detected: Mean = "+str(np.round(mean,4))+" [arc-sec], STD = "+str(np.round(std,4))+
-        #           " [arc-sec]\nUndetected: "+"Mean = "+str(np.round(mean_undet,4))+" [arc-sec], STD = "+str(np.round(std_undet,4))+" [arc-sec]")
+
         plt.tight_layout()
         plt.savefig(f'{output_path}\Seperation_ArcSec.pdf',format='pdf')
         plt.clf()
@@ -108,12 +123,9 @@ def quasars_host_seperation(output_path,df_path,df_CE_path,df_torus_path,sep = F
         outputDF["group"] = db['group']
         outputDF["ALMA name"] = db['ALMA name']
         outputDF["Observation date"] = dateList
-        outputDF.to_excel(f"{output_path}\DatesFile" + datetime.now().strftime("%m%d%Y-%H%M%S") + ".xlsx")
+        outputDF.to_excel(f"{output_path}\DatesFile_" + datetime.now().strftime("%m%d%Y-%H%M%S") + ".xlsx")
 
 
 if __name__ == '__main__':
-    out_path == 'Replace with your output path'
-    df_path = pd.read_excel('..data/ALMA x Herschel CASA input - March23.xlsx')
-    df_CE_path = pd.read_excel('..data/Chary_corrected_table_9feb17.xlsx')
-    df_torus_path = pd.read_csv('..dataSED_table_Lani_2017 - corrected.csv')
-    quasars_host_seperation(out_path,df_path,df_CE_path,df_torus_path,sep=True)
+    out_path = 'Replace with your output path'
+    quasars_host_seperation(out_path,sep=True,dates=True)

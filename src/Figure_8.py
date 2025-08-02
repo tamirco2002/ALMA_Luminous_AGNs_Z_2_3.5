@@ -1,8 +1,13 @@
-# Figure 4.5 in Thesis - Calculated mass growth trajectories
+import pandas as pd
+
+from Extensions import *
+
+
+# Figure 8 - Calculated mass growth trajectories
 def Growth_Evolution(output_path,AGNs_df_path, rest_df_path,det = True):
 
-    AGNs_df = pd.read_excel(agns_path)
-    rest_df = pd.read_excel(rest_path)
+    AGNs_df = pd.read_excel(AGNs_df_path)
+    rest_df = pd.read_excel(rest_df_path)
 
     # plt.scatter(AGNs_df["log M_gal"],AGNs_df["log M_BH"],c="brown",marker='.',zorder=-10)
     plt.errorbar(rest_df["log M_gal"], rest_df["log M_BH"],rest_df["e_logM_BH"],ls="",marker='.',color='gray',zorder=-10,alpha=0.5)
@@ -108,8 +113,8 @@ def Growth_Evolution(output_path,AGNs_df_path, rest_df_path,det = True):
 
 
 if __name__ == '__main__':
-    out_path == 'Replace with your output path'
-    reinesPath = r"D:\אוניברסיטה\אסטרופיזיקה\ALMA-Luminous-AGNs-at-z-2-3.5--\Data\Reines"
+    out_path ='Replace with your output path'
+    reinesPath = r"..\data\Growth_Evo_Figure"
     AGNs_df_path = reinesPath + "\\table1.xlsx"
     rest_df_path = reinesPath + "\\table3.xlsx"
-    SFR_Mdot_z(output_path,AGNs_df_path, rest_df_path)
+    Growth_Evolution(out_path,AGNs_df_path, rest_df_path)

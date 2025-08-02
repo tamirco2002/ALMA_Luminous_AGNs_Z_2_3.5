@@ -9,7 +9,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from Functions import *
+
 from astropy import units as u, constants as const
 from astropy.cosmology import LambdaCDM
 from astropy.io import fits
@@ -112,7 +112,7 @@ def analysis(sources,saveFile,create_plots,showPlots,create_images,GB_type='BB')
         if create_plots:
             plots_data_obj = Plots_Data(flux,freq,wavelengths,wl_CE,chary_nuLnu_arr,torus,torus_wls)
             source.findTBeta()
-            gb_bf,gb_ff = source.plot_NuLnu_wl_Lsun(flux,freq,wavelengths,wl_CE,chary_nuLnu_arr,torus,torus_wls,showPlots=showPlots)
+            gb_bf,gb_ff = source.plot_NuLnu_wl_Lsun(plots_data_obj,showPlots=showPlots)
             plots_data_obj.gb_bf, plots_data_obj.gb_ff = gb_bf,gb_ff
             source.plot_NuLnu_wl_cgs(flux, freq, wavelengths, wl_CE, chary_nuLnu_arr, torus, torus_wls,gb_bf,gb_ff,showPlots=showPlots)
             source.plot_Fnu_freq(flux, freq, wavelengths, wl_CE, chary_nuLnu_arr, torus, torus_wls,gb_bf,gb_ff,showPlots=showPlots)

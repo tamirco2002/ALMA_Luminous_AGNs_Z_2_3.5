@@ -267,7 +267,7 @@ class Source:
 
         return
 
-    def plot_NuLnu_wl_Lsun(self,flux,freq,gb_wls,wls_CE,nuLnu_CE,torus,torus_wls,showPlots=False):
+    def plot_NuLnu_wl_Lsun(self,plots_data,showPlots=False):
         """
         This function plot nu*L_nu [L_sun] vs. Wavelength (8-1000[micron]) for the source
         """
@@ -287,15 +287,15 @@ class Source:
         if self.group == 'det':
             if (self.T_bf != 47 or self.beta_bf != 1.6):
                 gb_bf = ext.scaled_graybody(freq, self.beta_bf, self.T_bf*u.K, self.rest_freq, self.UsedFlux)
-                plt.loglog(gb_wls,
-                           ext.Flux_to_nuLnu(gb_bf,ext.wl_to_freq(ext.wl_rest_to_obs(gb_wls * 10 ** 9, self.z)),
+                plt.loglog(plots_data.gb_wls,
+                           ext.Flux_to_nuLnu(gb_bf,ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.gb_wls * 10 ** 9, self.z)),
                                              self.dist_cm).value / const.L_sun.to(u.erg / u.s).value,':', c="orange",
                            label='Gray-Body T=' + str(np.round(self.T_bf, 1)) + "[K], \u03B2=" + str(
                                np.round(self.beta_bf, 2)), zorder=1)
             if (self.T_ff != 47 or self.beta_ff != 1.6):
-                gb_ff = ext.scaled_graybody(freq, self.beta_ff, self.T_ff*u.K, self.rest_freq, self.UsedFlux)
-                plt.loglog(gb_wls,
-                           ext.Flux_to_nuLnu(gb_ff,ext.wl_to_freq(ext.wl_rest_to_obs(gb_wls * 10 ** 9, self.z)),
+                gb_ff = ext.scaled_graybody(plots_data.freq, self.beta_ff, self.T_ff*u.K, self.rest_freq, self.UsedFlux)
+                plt.loglog(plots_data.gb_wls,
+                           ext.Flux_to_nuLnu(gb_ff,ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.gb_wls * 10 ** 9, self.z)),
                                              self.dist_cm).value / const.L_sun.to(u.erg / u.s).value,':', c="darkviolet",
                            label='Gray-Body T=' + str(np.round(self.T_ff, 1)) + "[K], \u03B2=" + str(np.round(self.beta_ff, 2)), zorder=1)
         else:
@@ -313,17 +313,17 @@ class Source:
         plt.plot([self.rest_wl, self.rest_wl],[(self.ALMA_nuLnu / const.L_sun.to(u.erg / u.s)).value, (self.nuLnu / const.L_sun.to(u.erg / u.s)).value], c='red')
 
         # Cherry & Elbaz
-        plt.loglog(wls_CE, 10 ** nuLnu_CE / const.L_sun.to(u.erg / u.s).value, label='Chary & Elbaz 01',zorder=2)
+        plt.loglog(plots_data.wls_CE, 10 ** plots_data.nuLnu_CE / const.L_sun.to(u.erg / u.s).value, label='Chary & Elbaz 01',zorder=2)
 
         # Main Graybody - Usually T = 47K, beta = 1.6
-        plt.loglog(gb_wls,
-                   ext.Flux_to_nuLnu(flux, ext.wl_to_freq(ext.wl_rest_to_obs(gb_wls * 10 ** 9, self.z)),
+        plt.loglog(plots_data.gb_wls,
+                   ext.Flux_to_nuLnu(plots_data.flux, ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.gb_wls * 10 ** 9, self.z)),
                                      self.dist_cm).value /
                    const.L_sun.to(u.erg / u.s).value, '--', c='black',
                    label="Gray-Body T=" + str(int(self.temp)) + "[K], \u03B2= " + str(self.beta), zorder=1)
 
         # Torus
-        plt.loglog(torus_wls, torus, label="Torus")
+        plt.loglog(plots_data.torus_wls, plots_data.torus, label="Torus")
 
         plt.xlabel('Rest Frame Wavelength, \u03BB [\u03BCm]')  # creating x-label
         plt.ylabel('Luminosity, \u03BD$L_{\u03BD}$ [$L_{\u2609}$]')  # creating y-label
@@ -358,7 +358,7 @@ class Source:
         matplotlib.rcParams.update(matplotlib.rcParamsDefault)
         return gb_bf,gb_ff
 
-    def plot_NuLnu_wl_cgs(self,flux,freq,gb_wls,wls_CE,nuLnu_CE,torus,torus_wls,gb_bf,gb_ff,showPlots=False):
+    def plot_NuLnu_wl_cgs(self,plots_data,showPlots=False):
         """
         This function plot nu*L_nu [cgs] vs. Wavelength (8-1000[micron]) for the source
         """
@@ -388,31 +388,31 @@ class Source:
                                                 np.log10(self.nuLnu)], c='red')
 
         # Cherry & Elbaz
-        plt.semilogx(wls_CE, nuLnu_CE, label='Chary & Elbaz 01', zorder=2)
+        plt.semilogx(plots_data.wls_CE, plots_data.nuLnu_CE, label='Chary & Elbaz 01', zorder=2)
 
         # Main Graybody - Usually T = 47K, beta = 1.6
-        plt.semilogx(gb_wls, np.log10(
-            ext.Flux_to_nuLnu(flux, ext.wl_to_freq(ext.wl_rest_to_obs(gb_wls * 10 ** 9, self.z)),self.dist_cm).value),
+        plt.semilogx(plots_data.gb_wls, np.log10(
+            ext.Flux_to_nuLnu(plots_data.flux, ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.gb_wls * 10 ** 9, self.z)),self.dist_cm).value),
                      '--', c='black',label="Gray-Body T=" + str(int(self.temp)) + "[K], \u03B2= " + str(self.beta), zorder=1)
 
         # Adding ff and bf Graybodies
         if self.group == 'det':
             if (self.T_bf != 47 * u.K or self.beta_bf != 1.6):
-                plt.semilogx(gb_wls, np.log10(
-                    ext.Flux_to_nuLnu(gb_bf, ext.wl_to_freq(ext.wl_rest_to_obs(gb_wls * 10 ** 9, self.z)),
+                plt.semilogx(plots_data.gb_wls, np.log10(
+                    ext.Flux_to_nuLnu(plots_data.gb_bf, ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.gb_wls * 10 ** 9, self.z)),
                                       self.dist_cm).value), ':', c="orange",
                              label='Gray-Body T=' + str(np.round(self.T_bf, 1)) + "[K], \u03B2=" + str(
                                  np.round(self.beta_bf, 2)), zorder=1)
 
             if (self.T_ff != 47 or self.beta_ff != 1.6):
-                plt.semilogx(gb_wls, np.log10(
-                    ext.Flux_to_nuLnu(gb_ff, ext.wl_to_freq(ext.wl_rest_to_obs(gb_wls * 10 ** 9, self.z)),
+                plt.semilogx(plots_data.gb_wls, np.log10(
+                    ext.Flux_to_nuLnu(plots_data.gb_ff, ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.gb_wls * 10 ** 9, self.z)),
                                       self.dist_cm).value), ':', c="darkviolet",
                              label='Gray-Body T=' + str(np.round(self.T_ff, 1)) + "[K], \u03B2=" + str(
                                  np.round(self.beta_ff, 2)), zorder=1)
 
         # Torus
-        plt.loglog(torus_wls, np.log10(ext.L_sun_to_L(torus)), label="Torus")
+        plt.loglog(plots_data.torus_wls, np.log10(ext.L_sun_to_L(plots_data.torus)), label="Torus")
 
         plt.xlabel('Rest Frame Wavelength, \u03BB [\u03BCm]')  # creating x-label
         plt.ylabel('Log \u03BD$L_{\u03BD}$ [erg/s]')  # creating y-label
@@ -422,12 +422,7 @@ class Source:
 
         # Changing the order of the legend
         handles, labels = ax.get_legend_handles_labels()
-        # if (np.abs(self.SNR)<3 or self.ALMA_det == 'non-det'):
-        #     handles = handles[-2:] + [handles[0], handles[-3]] + handles[1:-3]
-        #     labels = labels[-2:] + [labels[0], labels[-3]] + labels[1:-3]
-        # else:
-        #     handles = [handles[0], handles[-1], handles[1], handles[-2]] + handles[2:-2]
-        #     labels = [labels[0], labels[-1], labels[1], labels[-2]] + labels[2:-2]
+
         order = ext.orderSEDsLabels(labels)
         labels = [labels[i] for i in order]
         handles = [handles[i] for i in order]
@@ -453,11 +448,10 @@ class Source:
         matplotlib.rcParams.update(matplotlib.rcParamsDefault)
         return
 
-    def plot_Fnu_freq(self,flux,freq,gb_wls,wls_CE,nuLnu_CE,torus,torus_wls,gb_bf,gb_ff,showPlots=False):
+    def plot_Fnu_freq(self,plots_data,showPlots=False):
         """
         This function plots Flux Density [erg/Hz/s/cm^2] vs. Rest-Frame Frequency
         """
-
         plt.figure(figsize=(12, 8),dpi=600)
         plt.rc('font', size=16)
         ax = plt.axes()
@@ -481,30 +475,30 @@ class Source:
                                                 self.UsedFlux], c='red')
 
         # Cherry & Elbaz
-        plt.loglog(ext.wl_to_freq(wls_CE * 10 ** 9).value, ext.nuLnu_to_Flux((10 ** nuLnu_CE),
-                    ext.wl_to_freq(ext.wl_rest_to_obs(wls_CE * 10 ** 9,self.z)).value, self.dist_cm),
+        plt.loglog(ext.wl_to_freq(plots_data.wls_CE * 10 ** 9).value, ext.nuLnu_to_Flux((10 ** plots_data.nuLnu_CE),
+                    ext.wl_to_freq(ext.wl_rest_to_obs(plots_data.wls_CE * 10 ** 9,self.z)).value, self.dist_cm),
                    label='Chary & Elbaz 01', zorder=2)
 
         # Main Graybody - Usually T = 47K, beta = 1.6
-        plt.loglog(freq, flux, '--', c='black',
+        plt.loglog(plots_data.freq, plots_data.flux, '--', c='black',
                    label="Gray-Body T=" + str(int(self.temp)) + "[K], \u03B2= " + str(self.beta), zorder=1)
 
 
         # Adding ff and bf Graybodies
         if (self.group == 'det'):
             if (self.T_bf != 47 or self.beta_bf != 1.6):
-                plt.loglog(freq, gb_bf, ':', c="orange",
+                plt.loglog(plots_data.freq, plots_data.gb_bf, ':', c="orange",
                            label='Gray-Body T=' + str(np.round(self.T_bf, 1)) + "[K], \u03B2=" + str(
                                np.round(self.beta_bf, 2)), zorder=1)
 
             if (self.T_ff != 47 or self.beta_ff != 1.6):
-                plt.loglog(freq, gb_ff, ':', c="darkviolet",
+                plt.loglog(plots_data.freq, plots_data.gb_ff, ':', c="darkviolet",
                            label='Gray-Body T=' + str(np.round(self.T_ff, 1)) + "[K], \u03B2=" + str(
                                np.round(self.beta_ff, 2)), zorder=1)
 
         # Torus
-        plt.loglog(ext.wl_to_freq(torus_wls, freq_units="GHz"),ext.nuLnu_to_Flux(ext.L_sun_to_L(torus),
-                    ext.freq_rest_to_obs(ext.wl_to_freq(torus_wls, freq_units="GHz"),self.z), self.dist_cm), label="Torus")
+        plt.loglog(ext.wl_to_freq(plots_data.torus_wls, freq_units="GHz"),ext.nuLnu_to_Flux(ext.L_sun_to_L(plots_data.torus),
+                    ext.freq_rest_to_obs(ext.wl_to_freq(plots_data.torus_wls, freq_units="GHz"),self.z), self.dist_cm), label="Torus")
 
         plt.xlabel('Rest-Frame Frequency,\u03BD [GHz]')  # creating x-label
         plt.ylabel('Flux Density, $F_{\u03BD}$ [erg/Hz/s/cm\u00b2]')  # creating y-label
